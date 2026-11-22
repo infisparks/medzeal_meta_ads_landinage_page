@@ -334,14 +334,14 @@
       opacity: 0.85;
     }
 
-    /* Hero Model Image Container */
+    /* Hero Model Image Container - Extends seamlessly to top behind header */
     .hero-image-wrap {
       position: absolute;
       right: 0;
-      top: 0;
-      width: 235px;
-      height: 100%;
-      max-height: 360px;
+      top: -55px;
+      width: 245px;
+      height: calc(100% + 55px);
+      max-height: 420px;
       z-index: 3;
       pointer-events: none;
       overflow: hidden;
@@ -351,14 +351,14 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 86% 16%;
+      object-position: 86% 12%;
       -webkit-mask-image: 
         linear-gradient(to right, transparent 0%, transparent 4%, rgba(0, 0, 0, 0.4) 14%, black 24%, black 100%),
-        linear-gradient(to bottom, black 0%, black 78%, transparent 98%);
+        linear-gradient(to bottom, black 0%, black 82%, transparent 98%);
       -webkit-mask-composite: destination-in;
       mask-image: 
         linear-gradient(to right, transparent 0%, transparent 4%, rgba(0, 0, 0, 0.4) 14%, black 24%, black 100%),
-        linear-gradient(to bottom, black 0%, black 78%, transparent 98%);
+        linear-gradient(to bottom, black 0%, black 82%, transparent 98%);
       mask-composite: intersect;
     }
 
@@ -887,23 +887,7 @@
     <!-- Mobile Viewport Container -->
     <main class="mobile-screen" id="app">
 
-      <!-- Top Right Wave Decor (Matches Photo Sky Blue) -->
-      <svg class="bg-top-curve" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40 0C80 15 150 30 200 85V0H40Z" fill="url(#topWaveGrad)" />
-        <path d="M100 0C130 25 170 50 200 120V0H100Z" fill="url(#topWaveGrad2)" opacity="0.6"/>
-        <defs>
-          <linearGradient id="topWaveGrad" x1="110" y1="0" x2="200" y2="85" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#EAF4FC" stop-opacity="0.9"/>
-            <stop stop-color="#D4EAF8" stop-opacity="0.95"/>
-          </linearGradient>
-          <linearGradient id="topWaveGrad2" x1="140" y1="0" x2="200" y2="120" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#C2E2F7" stop-opacity="0.5"/>
-            <stop stop-color="#A6D5F4" stop-opacity="0.8"/>
-          </linearGradient>
-        </defs>
-      </svg>
-
-      <!-- Center Wave Behind Model (Soft Medical Blue to Match Photo) -->
+      <!-- Center Soft Sky-Blue Glow Wave Behind Model -->
       <svg class="bg-hero-mint-wave" viewBox="0 0 280 310" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M280 40C180 40 135 110 125 190C115 260 170 295 280 310V40Z" fill="url(#heroWaveGrad)" />
         <path d="M280 130C200 140 165 195 170 250C175 280 215 295 280 310V130Z" fill="url(#heroWaveGrad2)" opacity="0.45"/>
