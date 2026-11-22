@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chemical Peel for Clear, Glowing &amp; Healthy Skin | Medzeal Dermatology Clinic</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans for modern UI typography & Caveat for cursive accent -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --primary-navy: #082958;
+      --navy-title: #07254C;
+      --navy-sub: #2A4465;
+      --teal-glow: #00A896;
+      --teal-light: #C4F3EC;
+      --mint-bg: #D5F5F1;
+      --card-bg: #FFFFFF;
+      --card-border: #DDEEEA;
+      --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-script: 'Caveat', cursive, sans-serif;
+      --btn-grad-start: #08295E;
+      --btn-grad-end: #034293;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      background-color: #EBF1F6;
+      font-family: var(--font-main);
+      color: var(--navy-title);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Outer Wrapper: Centered mobile screen on desktop, edge-to-edge on mobile */
+    .app-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .mobile-screen {
+      width: 100%;
+      max-width: 420px;
+      min-height: 100vh;
+      background: #FFFFFF;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 40px rgba(8, 40, 85, 0.12);
+    }
+
+    @media (max-width: 480px) {
+      .app-wrapper {
+        background: #FFFFFF;
+      }
+      .mobile-screen {
+        max-width: 100%;
+        box-shadow: none;
+      }
+    }
+
+    /* Ambient Background Fluid Curves */
+    .bg-top-curve {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 190px;
+      height: 130px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .bg-hero-mint-wave {
+      position: absolute;
+      top: 80px;
+      right: -15px;
+      width: 250px;
+      height: 290px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Sparkle Animations */
+    .sparkle {
+      display: inline-block;
+      line-height: 1;
+      animation: sparkleAnim 2.8s ease-in-out infinite alternate;
+      transform-origin: center;
+    }
+
+    @keyframes sparkleAnim {
+      0% { transform: scale(0.9) rotate(-6deg); opacity: 0.85; }
+      100% { transform: scale(1.15) rotate(14deg); opacity: 1; }
+    }
+
+    /* ==========================================================
+       HEADER
+       ========================================================== */
+    .header {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 14px 8px 14px;
+      gap: 6px;
+    }
+
+    .brand-logo-wrap {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .brand-logo {
+      height: 38px;
+      max-width: 148px;
+      object-fit: contain;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .clinic-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #FFFFFF;
+      border: 1px solid #D2E4F2;
+      border-radius: 9999px;
+      padding: 5px 9px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .clinic-head-icon {
+      width: 15px;
+      height: 15px;
+      stroke: var(--primary-navy);
+      fill: none;
+      stroke-width: 1.8;
+      flex-shrink: 0;
+    }
+
+    .clinic-pill span {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--primary-navy);
+      letter-spacing: -0.1px;
+      white-space: nowrap;
+    }
+
+    .menu-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 3px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .menu-bar {
+      width: 22px;
+      height: 2.8px;
+      background-color: var(--primary-navy);
+      border-radius: 2px;
+    }
+
+    /* ==========================================================
+       HERO SECTION
+       ========================================================== */
+    .hero-section {
+      position: relative;
+      z-index: 5;
+      padding: 6px 14px 2px 14px;
+      display: flex;
+      align-items: flex-start;
+      min-height: 295px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 4;
+      width: 57%;
+      padding-top: 4px;
+    }
+
+    /* Badge */
+    .badge-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .care-badge {
+      display: inline-block;
+      background: #C4F3EC;
+      color: #064B6C;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 4.5px 10px;
+      border-radius: 9999px;
+      letter-spacing: -0.1px;
+      white-space: nowrap;
+    }
+
+    .badge-sparkles {
+      position: absolute;
+      top: -12px;
+      right: -24px;
+      display: flex;
+      gap: 3px;
+    }
+
+    .badge-sparkles svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--teal-glow);
+    }
+
+    .badge-sparkles svg:last-child {
+      width: 10px;
+      height: 10px;
+      margin-top: 5px;
+    }
+
+    /* Hero Typography */
+    .title-main {
+      font-size: 42px;
+      font-weight: 900;
+      line-height: 0.93;
+      color: var(--navy-title);
+      letter-spacing: -0.8px;
+      margin: 0;
+    }
+
+    .title-sub {
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--navy-title);
+      margin-top: 7px;
+      letter-spacing: -0.3px;
+    }
+
+    .title-sub .highlight-glow {
+      color: var(--teal-glow);
+    }
+
+    .hero-desc {
+      font-size: 11px;
+      line-height: 1.38;
+      font-weight: 500;
+      color: var(--navy-sub);
+      margin-top: 8px;
+      margin-bottom: 12px;
+      padding-right: 2px;
+    }
+
+    /* Price Badge */
+    .price-pill {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: #CCF4EF;
+      padding: 6px 16px 7px 14px;
+      border-radius: 20px;
+      box-shadow: 0 4px 14px rgba(0, 168, 150, 0.15);
+      position: relative;
+    }
+
+    .price-pill .price-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #064560;
+      line-height: 1;
+      margin-bottom: 1px;
+    }
+
+    .price-pill .price-val-row {
+      position: relative;
+      display: inline-block;
+    }
+
+    .price-pill .price-num {
+      font-size: 28px;
+      font-weight: 900;
+      color: #063955;
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+    }
+
+    .price-pill .price-brush-line {
+      position: absolute;
+      bottom: -3px;
+      left: 8px;
+      width: 78%;
+      height: 3.5px;
+      background: var(--teal-glow);
+      border-radius: 4px;
+      opacity: 0.85;
+    }
+
+    /* Hero Model Image Container */
+    .hero-image-wrap {
+      position: absolute;
+      right: 0;
+      top: -6px;
+      width: 215px;
+      height: 300px;
+      z-index: 3;
+      pointer-events: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
+    .hero-model-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: right top;
+    }
+
+    /* ==========================================================
+       THREE BENEFIT CARDS
+       ========================================================== */
+    .features-row {
+      position: relative;
+      z-index: 6;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      padding: 10px 14px 12px 14px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 17px;
+      padding: 12px 4px 10px 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(8, 41, 84, 0.04);
+      transition: transform 0.15s ease;
+    }
+
+    .feature-card:active {
+      transform: translateY(1px);
+    }
+
+    .feature-icon-box {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feature-icon-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .feature-text {
+      font-size: 10.5px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--navy-title);
+    }
+
+    /* ==========================================================
+       BEFORE / AFTER & "Reveal Your Natural Glow"
+       ========================================================== */
+    .glow-showcase-section {
+      position: relative;
+      z-index: 6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 14px 10px 14px;
+      gap: 10px;
+    }
+
+    .before-after-box {
+      flex: 0 0 54%;
+      max-width: 54%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(7, 37, 76, 0.08);
+      background: #FFFFFF;
+      display: flex;
+    }
+
+    .before-after-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .script-glow-box {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      padding-left: 2px;
+    }
+
+    .script-sparkles {
+      position: absolute;
+      top: -12px;
+      right: 0;
+      display: flex;
+      gap: 3px;
+    }
+
+    .script-sparkles svg {
+      width: 15px;
+      height: 15px;
+      fill: var(--teal-glow);
+    }
+
+    .script-sparkles svg:last-child {
+      width: 10px;
+      height: 10px;
+      margin-top: 5px;
+    }
+
+    .script-line-1 {
+      font-family: var(--font-script);
+      font-size: 26px;
+      font-weight: 700;
+      color: #075069;
+      line-height: 1.05;
+      letter-spacing: 0.1px;
+      transform: rotate(-2deg);
+      display: block;
+      white-space: nowrap;
+    }
+
+    .script-line-2 {
+      font-family: var(--font-script);
+      font-size: 29px;
+      font-weight: 700;
+      color: #075069;
+      line-height: 1.05;
+      letter-spacing: 0.1px;
+      transform: rotate(-2deg);
+      display: block;
+      white-space: nowrap;
+      margin-bottom: 2px;
+    }
+
+    .script-swoosh {
+      width: 110px;
+      height: 8px;
+      margin-top: -3px;
+      display: block;
+    }
+
+    /* ==========================================================
+       CALL TO ACTION: BOOK APPOINTMENT
+       ========================================================== */
+    .cta-container {
+      position: relative;
+      z-index: 6;
+      padding: 4px 14px 8px 14px;
+    }
+
+    .btn-book-now {
+      width: 100%;
+      height: 52px;
+      background: linear-gradient(135deg, var(--btn-grad-start) 0%, var(--btn-grad-end) 100%);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 9999px;
+      font-family: var(--font-main);
+      font-size: 16.5px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(7, 44, 98, 0.38);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-book-now::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+      transform: skewX(-20deg);
+      animation: btnShine 4s infinite ease-in-out;
+    }
+
+    @keyframes btnShine {
+      0%, 70% { left: -100%; }
+      100% { left: 200%; }
+    }
+
+    .btn-book-now:active {
+      transform: scale(0.98);
+      box-shadow: 0 4px 12px rgba(7, 44, 98, 0.3);
+    }
+
+    .calendar-icon {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 2;
+      flex-shrink: 0;
+    }
+
+    .arrow-icon {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 2.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      margin-left: 2px;
+    }
+
+    /* ==========================================================
+       TRUST BADGE LINE
+       ========================================================== */
+    .trust-footer-line {
+      position: relative;
+      z-index: 6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 6px 14px 16px 14px;
+    }
+
+    .trust-divider {
+      flex: 1;
+      height: 1px;
+      background: #C6D8E6;
+      max-width: 36px;
+    }
+
+    .trust-content {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .trust-shield-icon {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: var(--teal-glow);
+      stroke-width: 2.2;
+      flex-shrink: 0;
+    }
+
+    .trust-text {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0E335E;
+      letter-spacing: -0.1px;
+      white-space: nowrap;
+    }
+
+    /* ==========================================================
+       BOTTOM FLUID WAVES
+       ========================================================== */
+    .footer-waves-wrap {
+      position: relative;
+      z-index: 5;
+      width: 100%;
+      height: 65px;
+      margin-top: auto;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .footer-waves-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* ==========================================================
+       INTERACTIVE APPOINTMENT MODAL & MENU DRAWER
+       ========================================================== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(6, 26, 56, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .booking-sheet {
+      width: 100%;
+      max-width: 420px;
+      background: #FFFFFF;
+      border-radius: 24px 24px 0 0;
+      padding: 22px 18px 30px 18px;
+      transform: translateY(100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-overlay.active .booking-sheet {
+      transform: translateY(0);
+    }
+
+    .sheet-handle {
+      width: 40px;
+      height: 4.5px;
+      background: #D9E2EC;
+      border-radius: 3px;
+      margin: 0 auto 16px auto;
+    }
+
+    .sheet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .sheet-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--navy-title);
+    }
+
+    .sheet-close-btn {
+      background: #F0F4F8;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      color: #627D98;
+    }
+
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .form-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy-title);
+    }
+
+    .form-input, .form-select {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid #D9E2EC;
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: var(--font-main);
+      color: #102A43;
+      outline: none;
+      background: #F8FAFC;
+    }
+
+    .form-input:focus, .form-select:focus {
+      border-color: var(--teal-glow);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 3px rgba(0, 168, 150, 0.12);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .offer-reminder {
+      background: #E6F8F5;
+      border: 1px dashed var(--teal-glow);
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .offer-reminder-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #064E54;
+    }
+
+    .offer-reminder-price {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--teal-glow);
+    }
+
+    .btn-submit-booking {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--btn-grad-start) 0%, var(--btn-grad-end) 100%);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: var(--font-main);
+      cursor: pointer;
+      margin-top: 6px;
+      box-shadow: 0 6px 18px rgba(7, 44, 98, 0.28);
+    }
+
+    /* Side Nav Drawer */
+    .menu-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 100%;
+      background: #FFFFFF;
+      z-index: 101;
+      padding: 24px 20px;
+      box-shadow: -8px 0 24px rgba(0,0,0,0.15);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-drawer.open {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #EAEFF5;
+    }
+
+    .drawer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .drawer-links a {
+      text-decoration: none;
+      color: var(--navy-title);
+      font-size: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 0;
+    }
+
+    /* Toast Notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #092C5E;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      font-size: 13.5px;
+      font-weight: 600;
+      z-index: 200;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      white-space: nowrap;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-wrapper">
+    <!-- Mobile Viewport Container -->
+    <main class="mobile-screen" id="app">
+
+      <!-- Top Right Wave Decor -->
+      <svg class="bg-top-curve" viewBox="0 0 190 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0C80 15 150 30 190 85V0H40Z" fill="url(#topWaveGrad)" />
+        <path d="M100 0C130 25 170 50 190 120V0H100Z" fill="url(#topWaveGrad2)" opacity="0.65"/>
+        <defs>
+          <linearGradient id="topWaveGrad" x1="110" y1="0" x2="190" y2="85" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E2FAF6" stop-opacity="0.9"/>
+            <stop stop-color="#C2F2EB" stop-opacity="0.95"/>
+          </linearGradient>
+          <linearGradient id="topWaveGrad2" x1="140" y1="0" x2="190" y2="120" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#B2EDE4" stop-opacity="0.4"/>
+            <stop stop-color="#7BE2D3" stop-opacity="0.8"/>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <!-- Center Mint Wave Behind Model -->
+      <svg class="bg-hero-mint-wave" viewBox="0 0 250 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M250 50C170 50 130 110 120 180C110 240 160 270 250 280V50Z" fill="url(#heroWaveGrad)" />
+        <path d="M250 140C190 150 160 195 165 240C170 265 200 275 250 280V140Z" fill="url(#heroWaveGrad2)" opacity="0.5"/>
+        <defs>
+          <linearGradient id="heroWaveGrad" x1="250" y1="50" x2="120" y2="260" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#C5F4ED" stop-opacity="0.8"/>
+            <stop stop-color="#E1FAF7" stop-opacity="0.25"/>
+          </linearGradient>
+          <linearGradient id="heroWaveGrad2" x1="250" y1="140" x2="160" y2="270" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#55D8C7"/>
+            <stop stop-color="#2AC2B1" stop-opacity="0.1"/>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <!-- ==========================================================
+           HEADER
+           ========================================================== -->
+      <header class="header">
+        <div class="brand-logo-wrap">
+          <img src="image/logo.png" alt="Medzeal - Discover Wellness, Embrace Healing" class="brand-logo" />
+        </div>
+
+        <div class="header-actions">
+          <!-- Dermatology Clinic Pill Badge -->
+          <div class="clinic-pill">
+            <!-- Outline Clinic / Dermatologist Silhouette Icon -->
+            <svg class="clinic-head-icon" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+            <span>Dermatology Clinic</span>
+          </div>
+
+          <!-- Hamburger Menu Button -->
+          <button class="menu-btn" id="openMenuBtn" aria-label="Open Navigation Menu">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+          </button>
+        </div>
+      </header>
+
+      <!-- ==========================================================
+           HERO SECTION
+           ========================================================== -->
+      <section class="hero-section">
+        <!-- Left Column: Copy & Offer -->
+        <div class="hero-content">
+          <!-- Professional Dermatology Care Badge with floating ✦ Sparkles -->
+          <div class="badge-wrap">
+            <span class="care-badge">Professional Dermatology Care</span>
+            <div class="badge-sparkles" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="sparkle"><path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z"/></svg>
+              <svg viewBox="0 0 24 24" class="sparkle" style="animation-delay: 0.6s;"><path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z"/></svg>
+            </div>
+          </div>
+
+          <!-- Headline -->
+          <div class="hero-headline">
+            <h1 class="title-main">Chemical<br>Peel</h1>
+            <p class="title-sub">for Clear, <span class="highlight-glow">Glowing</span><br>&amp; Healthy Skin</p>
+          </div>
+
+          <!-- Description -->
+          <p class="hero-desc">
+            Safely fade pigmentation, stubborn tanning, dullness &amp; acne marks.
+          </p>
+
+          <!-- Price Tag: Only ₹1,499 -->
+          <div class="price-pill">
+            <span class="price-label">Only</span>
+            <div class="price-val-row">
+              <span class="price-num">₹1,499</span>
+              <div class="price-brush-line"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Hero Model Image -->
+        <div class="hero-image-wrap">
+          <img src="image/herosection.png" alt="Chemical Peel Application" class="hero-model-img" />
+        </div>
+      </section>
+
+      <!-- ==========================================================
+           THREE BENEFIT / FEATURE CARDS
+           ========================================================== -->
+      <section class="features-row" aria-label="Key Benefits">
+        <!-- Card 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <img src="image/icon/1.png" alt="Fades Pigmentation icon" />
+          </div>
+          <p class="feature-text">Fades<br>Pigmentation &amp;<br>Dark Spots</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <img src="image/icon/2.png" alt="Clears Acne Marks icon" />
+          </div>
+          <p class="feature-text">Clears Acne<br>Marks &amp;<br>Uneven Tone</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <img src="image/icon/3.png" alt="US-FDA Approved Peels icon" />
+          </div>
+          <p class="feature-text">US-FDA Approved<br>Medical Peels</p>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+           BEFORE / AFTER & "Reveal Your Natural Glow"
+           ========================================================== -->
+      <section class="glow-showcase-section">
+        <!-- Left: Before / After Comparison Image -->
+        <div class="before-after-box">
+          <img src="image/beforeafter.png" alt="Acne Marks Treatment Before and After Results" />
+        </div>
+
+        <!-- Right: Script Callout -->
+        <div class="script-glow-box">
+          <div class="script-sparkles" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="sparkle"><path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z"/></svg>
+            <svg viewBox="0 0 24 24" class="sparkle" style="animation-delay: 0.9s;"><path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z"/></svg>
+          </div>
+          <span class="script-line-1">Reveal Your</span>
+          <span class="script-line-2">Natural Glow</span>
+          <!-- Decorative Teal Curved Swoosh Stroke -->
+          <svg class="script-swoosh" viewBox="0 0 110 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 3.5C28 6.5 75 7.5 108 2.5" stroke="#00A896" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+           CALL TO ACTION: BOOK APPOINTMENT
+           ========================================================== -->
+      <section class="cta-container">
+        <button class="btn-book-now" id="bookAppointmentBtn">
+          <!-- Calendar SVG Icon -->
+          <svg class="calendar-icon" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="18" rx="4" />
+            <line x1="16" y1="2" x2="16" y2="6" stroke-linecap="round"/>
+            <line x1="8" y1="2" x2="8" y2="6" stroke-linecap="round"/>
+            <line x1="3" y1="10" x2="21" y2="10" />
+            <circle cx="8" cy="14" r="1.2" fill="#FFFFFF"/>
+            <circle cx="12" cy="14" r="1.2" fill="#FFFFFF"/>
+            <circle cx="16" cy="14" r="1.2" fill="#FFFFFF"/>
+            <circle cx="8" cy="18" r="1.2" fill="#FFFFFF"/>
+            <circle cx="12" cy="18" r="1.2" fill="#FFFFFF"/>
+            <circle cx="16" cy="18" r="1.2" fill="#FFFFFF"/>
+          </svg>
+          <span>Book Appointment</span>
+          <!-- Right Arrow / Chevron -->
+          <svg class="arrow-icon" viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      </section>
+
+      <!-- ==========================================================
+           TRUST BADGE LINE
+           ========================================================== -->
+      <div class="trust-footer-line">
+        <span class="trust-divider"></span>
+        <div class="trust-content">
+          <!-- Shield Check Icon -->
+          <svg class="trust-shield-icon" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span class="trust-text">Expert Care &nbsp;•&nbsp; Healthy Skin &nbsp;•&nbsp; Lasting Confidence</span>
+        </div>
+        <span class="trust-divider"></span>
+      </div>
+
+      <!-- ==========================================================
+           BOTTOM FLUID WAVES
+           ========================================================== -->
+      <div class="footer-waves-wrap" aria-hidden="true">
+        <svg class="footer-waves-svg" viewBox="0 0 420 65" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Wave 1 (Vibrant Mint/Teal) -->
+          <path d="M0 28C75 16 150 6 245 20C325 31 370 26 420 16V65H0V28Z" fill="url(#botWave1)"/>
+          <!-- Wave 2 (Deep Teal to Navy) -->
+          <path d="M0 42C95 26 195 44 295 33C350 26 390 29 420 35V65H0V42Z" fill="url(#botWave2)"/>
+          <defs>
+            <linearGradient id="botWave1" x1="0" y1="18" x2="420" y2="35" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#3AD0C0"/>
+              <stop stop-color="#00A896"/>
+            </linearGradient>
+            <linearGradient id="botWave2" x1="0" y1="32" x2="420" y2="65" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#008080"/>
+              <stop stop-color="#044265"/>
+              <stop stop-color="#072C5B"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ==========================================================
+       APPOINTMENT BOOKING MODAL (SLIDE-UP DRAWER)
+       ========================================================== -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="booking-sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <h3 class="sheet-title">Book Chemical Peel</h3>
+        <button class="sheet-close-btn" id="closeModalBtn" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <div class="offer-reminder" style="margin-bottom: 16px;">
+        <span class="offer-reminder-text">Special Introductory Offer</span>
+        <span class="offer-reminder-price">₹1,499</span>
+      </div>
+
+      <form class="booking-form" id="appointmentForm" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-input" placeholder="e.g. Priya Sharma" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phone Number *</label>
+          <input type="tel" class="form-input" placeholder="+91 98765 43210" pattern="[0-9+ -]{10,15}" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Preferred Date *</label>
+            <input type="date" class="form-input" id="bookingDate" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Time Slot *</label>
+            <select class="form-select" required>
+              <option value="">Select Time</option>
+              <option value="morning">10:00 AM - 12:00 PM</option>
+              <option value="afternoon">01:00 PM - 04:00 PM</option>
+              <option value="evening">05:00 PM - 08:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Skin Concern</label>
+          <select class="form-select">
+            <option value="pigmentation">Pigmentation &amp; Dark Spots</option>
+            <option value="acne">Acne Marks &amp; Active Pimples</option>
+            <option value="dullness">Dullness &amp; Stubborn Tan</option>
+            <option value="anti-aging">Uneven Tone &amp; Anti-Aging</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-submit-booking">Confirm Appointment</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       SIDE NAVIGATION DRAWER
+       ========================================================== -->
+  <div class="menu-drawer" id="sideNav">
+    <div class="drawer-header">
+      <img src="image/logo.png" alt="Medzeal Logo" style="height: 28px; object-fit: contain;">
+      <button class="sheet-close-btn" id="closeDrawerBtn">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#app">Home <span>&rsaquo;</span></a></li>
+      <li><a href="#app" onclick="openBooking()">Chemical Peels (₹1,499) <span>&rsaquo;</span></a></li>
+      <li><a href="#app">Acne &amp; Scar Treatment <span>&rsaquo;</span></a></li>
+      <li><a href="#app">Laser Skin Therapy <span>&rsaquo;</span></a></li>
+      <li><a href="#app">Our Dermatologists <span>&rsaquo;</span></a></li>
+      <li><a href="#app">Clinic Locations <span>&rsaquo;</span></a></li>
+      <li><a href="#app" onclick="openBooking()" style="color: var(--teal-glow); font-weight: 700;">Book Consultation <span>&rsaquo;</span></a></li>
+    </ul>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMsg">✓ Appointment request submitted! We will contact you shortly.</div>
+
+  <!-- JavaScript Interactivity -->
+  <script>
+    // Set default minimum date to today
+    const dateInput = document.getElementById('bookingDate');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.min = today;
+      dateInput.value = today;
+    }
+
+    // Modal Handling
+    const modal = document.getElementById('bookingModal');
+    const openBtn = document.getElementById('bookAppointmentBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    function openBooking() {
+      modal.classList.add('active');
+      closeDrawer();
+    }
+
+    function closeBooking() {
+      modal.classList.remove('active');
+    }
+
+    openBtn.addEventListener('click', openBooking);
+    closeBtn.addEventListener('click', closeBooking);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeBooking();
+      }
+    });
+
+    // Side Drawer Handling
+    const sideNav = document.getElementById('sideNav');
+    const openMenuBtn = document.getElementById('openMenuBtn');
+    const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+
+    function openDrawer() {
+      sideNav.classList.add('open');
+      modal.classList.remove('active');
+    }
+
+    function closeDrawer() {
+      sideNav.classList.remove('open');
+    }
+
+    openMenuBtn.addEventListener('click', openDrawer);
+    closeDrawerBtn.addEventListener('click', closeDrawer);
+
+    // Form submission simulation
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      closeBooking();
+      const toast = document.getElementById('toastMsg');
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+  </script>
+</body>
+</html>
