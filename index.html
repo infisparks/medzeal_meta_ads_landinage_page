@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Chemical Peel for Clear, Glowing &amp; Healthy Skin | Medzeal Dermatology Clinic</title>
   
-  <!-- Google Fonts: Plus Jakarta Sans for modern UI typography & Caveat for cursive accent -->
+  <!-- Google Fonts: Plus Jakarta Sans for UI & Caveat for cursive accent -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
       --navy-title: #07254C;
       --navy-sub: #2A4465;
       --teal-glow: #00A896;
+      --teal-accent: #02B29F;
       --teal-light: #C4F3EC;
       --mint-bg: #D5F5F1;
       --card-bg: #FFFFFF;
@@ -45,7 +46,7 @@
       overflow-x: hidden;
     }
 
-    /* Outer Wrapper: Centered mobile screen on desktop, edge-to-edge on mobile */
+    /* Outer Wrapper: Centered phone mockup on desktop, seamless on mobile */
     .app-wrapper {
       width: 100%;
       display: flex;
@@ -67,7 +68,7 @@
     }
 
     @media (max-width: 480px) {
-      .app-wrapper {
+      body, .app-wrapper {
         background: #FFFFFF;
       }
       .mobile-screen {
@@ -81,7 +82,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 190px;
+      width: 200px;
       height: 130px;
       pointer-events: none;
       z-index: 1;
@@ -89,10 +90,10 @@
 
     .bg-hero-mint-wave {
       position: absolute;
-      top: 80px;
-      right: -15px;
-      width: 250px;
-      height: 290px;
+      top: 55px;
+      right: -20px;
+      width: 280px;
+      height: 310px;
       pointer-events: none;
       z-index: 1;
     }
@@ -330,26 +331,26 @@
     .hero-image-wrap {
       position: absolute;
       right: 0;
-      top: -6px;
-      width: 215px;
-      height: 300px;
+      top: -10px;
+      width: 235px;
+      height: 310px;
       z-index: 3;
       pointer-events: none;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-end;
+      overflow: hidden;
     }
 
     .hero-model-img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      object-position: right top;
+      object-fit: cover;
+      object-position: 84% 18%;
+      -webkit-mask-image: radial-gradient(ellipse 92% 82% at 76% 38%, black 55%, rgba(0, 0, 0, 0.6) 75%, transparent 98%);
+      mask-image: radial-gradient(ellipse 92% 82% at 76% 38%, black 55%, rgba(0, 0, 0, 0.6) 75%, transparent 98%);
     }
 
     /* ==========================================================
        THREE BENEFIT CARDS
-       ========================================================== */
+       ========================================================= */
     .features-row {
       position: relative;
       z-index: 6;
@@ -859,15 +860,15 @@
     <main class="mobile-screen" id="app">
 
       <!-- Top Right Wave Decor -->
-      <svg class="bg-top-curve" viewBox="0 0 190 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40 0C80 15 150 30 190 85V0H40Z" fill="url(#topWaveGrad)" />
-        <path d="M100 0C130 25 170 50 190 120V0H100Z" fill="url(#topWaveGrad2)" opacity="0.65"/>
+      <svg class="bg-top-curve" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0C80 15 150 30 200 85V0H40Z" fill="url(#topWaveGrad)" />
+        <path d="M100 0C130 25 170 50 200 120V0H100Z" fill="url(#topWaveGrad2)" opacity="0.65"/>
         <defs>
-          <linearGradient id="topWaveGrad" x1="110" y1="0" x2="190" y2="85" gradientUnits="userSpaceOnUse">
+          <linearGradient id="topWaveGrad" x1="110" y1="0" x2="200" y2="85" gradientUnits="userSpaceOnUse">
             <stop stop-color="#E2FAF6" stop-opacity="0.9"/>
             <stop stop-color="#C2F2EB" stop-opacity="0.95"/>
           </linearGradient>
-          <linearGradient id="topWaveGrad2" x1="140" y1="0" x2="190" y2="120" gradientUnits="userSpaceOnUse">
+          <linearGradient id="topWaveGrad2" x1="140" y1="0" x2="200" y2="120" gradientUnits="userSpaceOnUse">
             <stop stop-color="#B2EDE4" stop-opacity="0.4"/>
             <stop stop-color="#7BE2D3" stop-opacity="0.8"/>
           </linearGradient>
@@ -875,15 +876,15 @@
       </svg>
 
       <!-- Center Mint Wave Behind Model -->
-      <svg class="bg-hero-mint-wave" viewBox="0 0 250 290" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M250 50C170 50 130 110 120 180C110 240 160 270 250 280V50Z" fill="url(#heroWaveGrad)" />
-        <path d="M250 140C190 150 160 195 165 240C170 265 200 275 250 280V140Z" fill="url(#heroWaveGrad2)" opacity="0.5"/>
+      <svg class="bg-hero-mint-wave" viewBox="0 0 280 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M280 40C180 40 135 110 125 190C115 260 170 295 280 310V40Z" fill="url(#heroWaveGrad)" />
+        <path d="M280 130C200 140 165 195 170 250C175 280 215 295 280 310V130Z" fill="url(#heroWaveGrad2)" opacity="0.5"/>
         <defs>
-          <linearGradient id="heroWaveGrad" x1="250" y1="50" x2="120" y2="260" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#C5F4ED" stop-opacity="0.8"/>
-            <stop stop-color="#E1FAF7" stop-opacity="0.25"/>
+          <linearGradient id="heroWaveGrad" x1="280" y1="40" x2="125" y2="290" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#C5F4ED" stop-opacity="0.85"/>
+            <stop stop-color="#E1FAF7" stop-opacity="0.3"/>
           </linearGradient>
-          <linearGradient id="heroWaveGrad2" x1="250" y1="140" x2="160" y2="270" gradientUnits="userSpaceOnUse">
+          <linearGradient id="heroWaveGrad2" x1="280" y1="130" x2="165" y2="290" gradientUnits="userSpaceOnUse">
             <stop stop-color="#55D8C7"/>
             <stop stop-color="#2AC2B1" stop-opacity="0.1"/>
           </linearGradient>
@@ -955,7 +956,7 @@
 
         <!-- Right Column: Hero Model Image -->
         <div class="hero-image-wrap">
-          <img src="image/herosection.png" alt="Chemical Peel Application" class="hero-model-img" />
+          <img src="image/herosecion2.png" alt="Chemical Peel Application" class="hero-model-img" />
         </div>
       </section>
 
