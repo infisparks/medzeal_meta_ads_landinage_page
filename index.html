@@ -346,11 +346,11 @@
       object-position: 86% 16%;
       -webkit-mask-image: 
         linear-gradient(to right, transparent 0%, transparent 4%, rgba(0, 0, 0, 0.4) 14%, black 24%, black 100%),
-        linear-gradient(to bottom, transparent 0%, black 6%, black 78%, transparent 98%);
+        linear-gradient(to bottom, black 0%, black 78%, transparent 98%);
       -webkit-mask-composite: destination-in;
       mask-image: 
         linear-gradient(to right, transparent 0%, transparent 4%, rgba(0, 0, 0, 0.4) 14%, black 24%, black 100%),
-        linear-gradient(to bottom, transparent 0%, black 6%, black 78%, transparent 98%);
+        linear-gradient(to bottom, black 0%, black 78%, transparent 98%);
       mask-composite: intersect;
     }
 
@@ -377,6 +377,7 @@
       text-align: center;
       box-shadow: 0 4px 14px rgba(8, 41, 84, 0.04);
       transition: transform 0.15s ease;
+      min-height: 96px;
     }
 
     .feature-card:active {
@@ -384,8 +385,8 @@
     }
 
     .feature-icon-box {
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       margin-bottom: 7px;
       display: flex;
       align-items: center;
@@ -399,10 +400,15 @@
     }
 
     .feature-text {
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 700;
-      line-height: 1.25;
+      line-height: 1.3;
       color: var(--navy-title);
+    }
+
+    .feature-text span {
+      display: block;
+      white-space: nowrap;
     }
 
     /* ==========================================================
@@ -865,34 +871,34 @@
     <!-- Mobile Viewport Container -->
     <main class="mobile-screen" id="app">
 
-      <!-- Top Right Wave Decor -->
+      <!-- Top Right Wave Decor (Matches Photo Sky Blue) -->
       <svg class="bg-top-curve" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M40 0C80 15 150 30 200 85V0H40Z" fill="url(#topWaveGrad)" />
-        <path d="M100 0C130 25 170 50 200 120V0H100Z" fill="url(#topWaveGrad2)" opacity="0.65"/>
+        <path d="M100 0C130 25 170 50 200 120V0H100Z" fill="url(#topWaveGrad2)" opacity="0.6"/>
         <defs>
           <linearGradient id="topWaveGrad" x1="110" y1="0" x2="200" y2="85" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#E2FAF6" stop-opacity="0.9"/>
-            <stop stop-color="#C2F2EB" stop-opacity="0.95"/>
+            <stop stop-color="#EAF4FC" stop-opacity="0.9"/>
+            <stop stop-color="#D4EAF8" stop-opacity="0.95"/>
           </linearGradient>
           <linearGradient id="topWaveGrad2" x1="140" y1="0" x2="200" y2="120" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#B2EDE4" stop-opacity="0.4"/>
-            <stop stop-color="#7BE2D3" stop-opacity="0.8"/>
+            <stop stop-color="#C2E2F7" stop-opacity="0.5"/>
+            <stop stop-color="#A6D5F4" stop-opacity="0.8"/>
           </linearGradient>
         </defs>
       </svg>
 
-      <!-- Center Mint Wave Behind Model -->
+      <!-- Center Wave Behind Model (Soft Medical Blue to Match Photo) -->
       <svg class="bg-hero-mint-wave" viewBox="0 0 280 310" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M280 40C180 40 135 110 125 190C115 260 170 295 280 310V40Z" fill="url(#heroWaveGrad)" />
-        <path d="M280 130C200 140 165 195 170 250C175 280 215 295 280 310V130Z" fill="url(#heroWaveGrad2)" opacity="0.5"/>
+        <path d="M280 130C200 140 165 195 170 250C175 280 215 295 280 310V130Z" fill="url(#heroWaveGrad2)" opacity="0.45"/>
         <defs>
           <linearGradient id="heroWaveGrad" x1="280" y1="40" x2="125" y2="290" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#C5F4ED" stop-opacity="0.85"/>
-            <stop stop-color="#E1FAF7" stop-opacity="0.3"/>
+            <stop stop-color="#D4ECF9" stop-opacity="0.85"/>
+            <stop stop-color="#ECF6FC" stop-opacity="0.3"/>
           </linearGradient>
           <linearGradient id="heroWaveGrad2" x1="280" y1="130" x2="165" y2="290" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#55D8C7"/>
-            <stop stop-color="#2AC2B1" stop-opacity="0.1"/>
+            <stop stop-color="#88C8EE"/>
+            <stop stop-color="#54B0E6" stop-opacity="0.1"/>
           </linearGradient>
         </defs>
       </svg>
@@ -967,7 +973,7 @@
       </section>
 
       <!-- ==========================================================
-           THREE BENEFIT / FEATURE CARDS
+           THREE BENEFIT / FEATURE CARDS (STRICT 2-LINE FORMAT)
            ========================================================== -->
       <section class="features-row" aria-label="Key Benefits">
         <!-- Card 1 -->
@@ -975,7 +981,10 @@
           <div class="feature-icon-box">
             <img src="image/icon/1.png" alt="Fades Pigmentation icon" />
           </div>
-          <p class="feature-text">Fades<br>Pigmentation &amp;<br>Dark Spots</p>
+          <p class="feature-text">
+            <span>Fades Pigmentation</span>
+            <span>&amp; Dark Spots</span>
+          </p>
         </div>
 
         <!-- Card 2 -->
@@ -983,7 +992,10 @@
           <div class="feature-icon-box">
             <img src="image/icon/2.png" alt="Clears Acne Marks icon" />
           </div>
-          <p class="feature-text">Clears Acne<br>Marks &amp;<br>Uneven Tone</p>
+          <p class="feature-text">
+            <span>Clears Acne Marks</span>
+            <span>&amp; Uneven Tone</span>
+          </p>
         </div>
 
         <!-- Card 3 -->
@@ -991,7 +1003,10 @@
           <div class="feature-icon-box">
             <img src="image/icon/3.png" alt="US-FDA Approved Peels icon" />
           </div>
-          <p class="feature-text">US-FDA Approved<br>Medical Peels</p>
+          <p class="feature-text">
+            <span>US-FDA Approved</span>
+            <span>Medical Peels</span>
+          </p>
         </div>
       </section>
 
